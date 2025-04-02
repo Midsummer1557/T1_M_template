@@ -16,22 +16,20 @@
       box-sizing: border-box;
     }
 
-    .wrapper {
-      padding: 0;           /* 위아래 여백 제거 */
-      height: 100%;
-      display: block;       /* 중앙 정렬 안 되도록 */
-      align-items: center;
-    }
+.wrapper {
+  padding: 0;           /* 위아래 여백 제거 */
+  display: block;       /* 중앙 정렬 안 되도록 */
+}
 
-    .toc-container {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 24px 32px;
-      width: 100%;
-      max-width: none;      /* 최대폭 제한 해제 */
-      box-sizing: border-box;
-    }
+
+.toc-container {
+  width: 100%;
+  max-width: none;      /* 최대폭 제한 해제 */
+  border-radius: 0;     /* 원하면 모서리 둥글기 제거 */
+  padding: 24px;        /* 내부 여백만 남기기 */
+  box-sizing: border-box;
+}
+
 
     .toc-title {
       font-size: 1.25rem;
