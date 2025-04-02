@@ -17,8 +17,9 @@
     }
 
     .wrapper {
+      padding: 0;           /* 위아래 여백 제거 */
       height: 100%;
-      display: flex;
+      display: block;       /* 중앙 정렬 안 되도록 */
       align-items: center;
       justify-content: center;
     }
@@ -29,7 +30,7 @@
       border-radius: 12px;
       padding: 24px 32px;
       width: 100%;
-      max-width: 720px;
+      max-width: none;      /* 최대폭 제한 해제 */
       box-sizing: border-box;
     }
 
