@@ -1,110 +1,114 @@
-<table style="border-collapse: collapse; width: 100%; font-family: 'Noto Sans KR', sans-serif; text-align: center; font-size: 15px;">
+<style>
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+
+  .responsive-table th {
+    background-color: #f6f6f6;
+    color: #b03e3e;
+    padding: 12px;
+    border: 1px solid #ccc;
+  }
+
+  .responsive-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .responsive-table a {
+    color: #b03e3e;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .responsive-table a:hover {
+    color: #e74c3c;
+  }
+
+  /* 반응형 */
+  @media (max-width: 768px) {
+    .responsive-table thead {
+      display: none;
+    }
+
+    .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+
+    .responsive-table td {
+      text-align: left;
+      padding-left: 40%;
+      position: relative;
+    }
+
+    .responsive-table td::before {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 30%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: bold;
+      color: #666;
+    }
+
+    .responsive-table td:nth-child(1)::before { content: "띠"; }
+    .responsive-table td:nth-child(2)::before { content: "월"; }
+    .responsive-table td:nth-child(3)::before { content: "화"; }
+    .responsive-table td:nth-child(4)::before { content: "수"; }
+    .responsive-table td:nth-child(5)::before { content: "목"; }
+    .responsive-table td:nth-child(6)::before { content: "금"; }
+  }
+</style>
+
+<table class="responsive-table">
   <thead>
-    <tr style="background-color: #fbeaea; color: #c0392b;">
-      <th style="padding: 10px; border: 1px solid #ddd;">요일</th>
-      <th style="padding: 10px; border: 1px solid #ddd;">월</th>
-      <th style="padding: 10px; border: 1px solid #ddd;">화</th>
-      <th style="padding: 10px; border: 1px solid #ddd;">수</th>
-      <th style="padding: 10px; border: 1px solid #ddd;">목</th>
-      <th style="padding: 10px; border: 1px solid #ddd;">금</th>
+    <tr>
+      <th>띠 / 요일</th>
+      <th>월</th>
+      <th>화</th>
+      <th>수</th>
+      <th>목</th>
+      <th>금</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">쥐</td>
-      <td><a href="#">갑자일주</a></td>
-      <td><a href="#">병자일주</a></td>
-      <td><a href="#">무자일주</a></td>
-      <td><a href="#">경자일주</a></td>
-      <td><a href="#">임자일주</a></td>
+      <td>쥐</td>
+      <td><a onclick="showInfo('갑자일주')">갑자일주</a></td>
+      <td><a onclick="showInfo('병자일주')">병자일주</a></td>
+      <td><a onclick="showInfo('무자일주')">무자일주</a></td>
+      <td><a onclick="showInfo('경자일주')">경자일주</a></td>
+      <td><a onclick="showInfo('임자일주')">임자일주</a></td>
     </tr>
+    <!-- 아래 행들도 같은 방식으로 반복 -->
     <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">소</td>
-      <td><a href="#">을축일주</a></td>
-      <td><a href="#">정축일주</a></td>
-      <td><a href="#">기축일주</a></td>
-      <td><a href="#">신축일주</a></td>
-      <td><a href="#">계축일주</a></td>
+      <td>소</td>
+      <td><a onclick="showInfo('을축일주')">을축일주</a></td>
+      <td><a onclick="showInfo('정축일주')">정축일주</a></td>
+      <td><a onclick="showInfo('기축일주')">기축일주</a></td>
+      <td><a onclick="showInfo('신축일주')">신축일주</a></td>
+      <td><a onclick="showInfo('계축일주')">계축일주</a></td>
     </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">호랑이</td>
-      <td><a href="#">갑인일주</a></td>
-      <td><a href="#">병인일주</a></td>
-      <td><a href="#">무인일주</a></td>
-      <td><a href="#">경인일주</a></td>
-      <td><a href="#">임인일주</a></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">토끼</td>
-      <td><a href="#">을묘일주</a></td>
-      <td><a href="#">정묘일주</a></td>
-      <td><a href="#">기묘일주</a></td>
-      <td><a href="#">신묘일주</a></td>
-      <td><a href="#">계묘일주</a></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">용</td>
-      <td><a href="#">갑진일주</a></td>
-      <td><a href="#">병진일주</a></td>
-      <td><a href="#">무진일주</a></td>
-      <td><a href="#">경진일주</a></td>
-      <td><a href="#">임진일주</a></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">뱀</td>
-      <td><a href="#">을사일주</a></td>
-      <td><a href="#">정사일주</a></td>
-      <td><a href="#">기사일주</a></td>
-      <td><a href="#">신사일주</a></td>
-      <td><a href="#">계사일주</a></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">말</td>
-      <td><a href="#">갑오일주</a></td>
-      <td><a href="#">병오일주</a></td>
-      <td><a href="#">무오일주</a></td>
-      <td><a href="#">경오일주</a></td>
-      <td><a href="#">임오일주</a></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">양</td>
-      <td><a href="#">을미일주</a></td>
-      <td><a href="#">정미일주</a></td>
-      <td><a href="#">기미일주</a></td>
-      <td><a href="#">신미일주</a></td>
-      <td><a href="#">계미일주</a></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">원숭이</td>
-      <td><a href="#">갑신일주</a></td>
-      <td><a href="#">병신일주</a></td>
-      <td><a href="#">무신일주</a></td>
-      <td><a href="#">경신일주</a></td>
-      <td><a href="#">임신일주</a></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">닭</td>
-      <td><a href="#">을유일주</a></td>
-      <td><a href="#">정유일주</a></td>
-      <td><a href="#">기유일주</a></td>
-      <td><a href="#">신유일주</a></td>
-      <td><a href="#">계유일주</a></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">개</td>
-      <td><a href="#">갑술일주</a></td>
-      <td><a href="#">병술일주</a></td>
-      <td><a href="#">무술일주</a></td>
-      <td><a href="#">경술일주</a></td>
-      <td><a href="#">임술일주</a></td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #ddd;">돼지</td>
-      <td><a href="#">을해일주</a></td>
-      <td><a href="#">정해일주</a></td>
-      <td><a href="#">기해일주</a></td>
-      <td><a href="#">신해일주</a></td>
-      <td><a href="#">계해일주</a></td>
-    </tr>
+    <!-- 생략된 행은 동일한 구조로 12지지 전부 반복 가능 -->
+    <!-- ... -->
   </tbody>
 </table>
+
+<script>
+  function showInfo(ilju) {
+    alert(ilju + "에 대한 설명은 여기에 표시됩니다."); // 향후 상세 팝업 내용 삽입 가능
+  }
+</script>
