@@ -1,0 +1,52 @@
+<style>
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.language-button {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 비율 */
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.language-button:hover {
+  transform: scale(1.03);
+}
+
+.language-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: bold;
+}
+</style>
+
+<div class="language-grid">
+  <a href="https://example.com/english" target="_blank" class="language-button" style="background-image: url('https://via.placeholder.com/500x281.png?text=English');">
+    <div class="language-label">영어</div>
+  </a>
+  <a href="https://example.com/japanese" target="_blank" class="language-button" style="background-image: url('https://via.placeholder.com/500x281.png?text=Japanese');">
+    <div class="language-label">일본어</div>
+  </a>
+  <a href="https://example.com/chinese" target="_blank" class="language-button" style="background-image: url('https://via.placeholder.com/500x281.png?text=Chinese');">
+    <div class="language-label">중국어</div>
+  </a>
+  <a href="https://example.com/spanish" target="_blank" class="language-button" style="background-image: url('https://via.placeholder.com/500x281.png?text=Spanish');">
+    <div class="language-label">스페인어</div>
+  </a>
+</div>
